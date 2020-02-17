@@ -26,5 +26,5 @@ const User = mongoose.model("User", userSchema);
 // newUser.save();
 
 app.get("/", (req, res) => {
-    res.send("ok");
+    res.sendFile('public/index.html', {root: __dirname});
 })
