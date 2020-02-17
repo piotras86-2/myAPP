@@ -18,20 +18,21 @@ const userSchema = mongoose.Schema({
 
 const User = mongoose.model("User", userSchema);
 
-// const newUser = new User ({
-//     fName: "jan",
-//     lName: "marian",
-//     email: "piotr@wp.pl",
-//     city: "Ojnice"
-//   });
-
-// newUser.save();
-
 app.get("/", (req, res) => {
     res.sendFile('public/index.html', {root: __dirname});
 })
 
 app.post("/", (req,res) => {
     console.log(req.body.fName, req.body.lName, req.body.email, req.body.city);
+
+    const newUser = new User ({
+    fName: req.body.fName,
+    lName: req.body.lName,
+    email: req.body.email,
+    city: req.body.city
+  });
+
+    newUser.save();
+
     res.redirect("/");
 })
