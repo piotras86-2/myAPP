@@ -1,2 +1,2 @@
 # myAPP
-This is initial project
+This is initial project. Let's GO!
