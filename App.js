@@ -32,7 +32,17 @@ app.post("/", (req,res) => {
     city: req.body.city
   });
 
-    newUser.save();
+    newUser.save((err) => {
+        if (!err) {
+            res.json({fName: req.body.fName,
+                lName: req.body.lName,
+                email: req.body.email,
+                city: req.body.city});
 
-    res.redirect("/");
+        } else {
+            res.send(err);
+        }
+
+
+    });
 })

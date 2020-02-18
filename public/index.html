@@ -5,13 +5,32 @@
     <link rel="stylesheet" href="styless.css">
   </head>
   <body>
+    <header class="header">
+      <div class="icon"></div>
+      <div class="top-nav">
+        <ul>
+          <li><a href="#">O mnie</a></li>
+          <li><a href="#">Projekty</a></li>
+          <li><a href="#">Kontakt</a></li>
+          <li><a href="#">GitHub</a></li>
+        </ul>
+      </div>
+    </header>
+<div class="body">
+<div class="contact-form">
 <form action="/" method="post">
-<input type="text" name="fName" placeholder="first name">
-<input type="text" name="lName" placeholder="last name">
-<input type="text" name="email" placeholder="email">
-<input type="text" name="city" placeholder="city">
-<button type="submit">submit</button>
+  <label for="fName">First name:</label>
+<input type="text" name="fName" placeholder="What is your name?" autocomplete="off">
+  <label for="lName">Last Name:</label>
+<input type="text" name="lName" placeholder="What is your last name?" autocomplete="off">
+  <label for="email">Your e-mail is:</label>
+<input type="text" name="email" placeholder="Provide valid e-mail address please" autocomplete="off">
+<label for="city">City where you live is:</label>
+<input type="text" name="city" placeholder="NY?" autocomplete="off">
+<button class="contact-button" type="submit">SUBMIT</button>
 </form>
+</div>
+</div>
     <div id="root"></div>
     <!-- <script src="../src/index.js" type="text/jsx"></script> -->
   </body>
