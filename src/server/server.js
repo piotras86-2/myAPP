@@ -1,13 +1,14 @@
-var path = require('path');
 import express from 'express';
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
+import ejs from "ejs";
 const app = express();
 const sum = require('./sum');
 
 app.listen(3000, () => console.log("Server Up"));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/../public'));
+app.set('view engine', 'ejs');
 
 mongoose.connect("mongodb://localhost:27017/users", { useNewUrlParser: true, useUnifiedTopology: true });
 
@@ -35,10 +36,7 @@ app.post("/", (req,res) => {
 
     newUser.save((err) => {
         if (!err) {
-            res.json({fName: req.body.fName,
-                lName: req.body.lName,
-                email: req.body.email,
-                city: req.body.city});
+            res.render("thankYou", {fName: req.body.fName, lName: req.body.lName});
 
         } else {
             res.send(err);
