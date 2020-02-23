@@ -1,6 +1,8 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: helvetica;
+    color: #3e3e3e;
 }
 .header {
     position: relative;
@@ -41,7 +43,12 @@ ul li{
     display: inline;
   }
 
+.body {
+    background-color: lightpink;
+}
+
 .contact-form {
+    margin: 10px 0 10px 400px;
     background-color: #f2f2f2;
     display: inline-block;
     height: 350px;
@@ -51,7 +58,7 @@ ul li{
 }
 
 .contact-form .contact-button {
-background-color: rosybrown;
+background-color: lightpink;
 width: 100%;
 border-radius: 7px;
 padding: 12px;
@@ -80,3 +87,8 @@ color: slateblue;
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
+
+.contact-form input:hover {
+    border-color: teal;
+}
+

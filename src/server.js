@@ -1,11 +1,13 @@
-const express = require("express");
+var path = require('path');
+import express from 'express';
+import mongoose from "mongoose";
+import bodyParser from "body-parser";
 const app = express();
-const mongoose = require("mongoose");
-const bodyParser = require ("body-parser");
+const sum = require('./sum');
 
 app.listen(3000, () => console.log("Server Up"));
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static("public"));
+app.use(express.static(__dirname + '/../public'));
 
 mongoose.connect("mongodb://localhost:27017/users", { useNewUrlParser: true, useUnifiedTopology: true });
 
@@ -19,11 +21,10 @@ const userSchema = mongoose.Schema({
 const User = mongoose.model("User", userSchema);
 
 app.get("/", (req, res) => {
-    res.sendFile('public/index.html', {root: __dirname});
+    res.sendFile(__dirname + '/../index.html');
 })
 
 app.post("/", (req,res) => {
-    console.log(req.body.fName, req.body.lName, req.body.email, req.body.city);
 
     const newUser = new User ({
     fName: req.body.fName,
@@ -46,3 +47,6 @@ app.post("/", (req,res) => {
 
     });
 })
+
+console.log(sum(2,3));
+
