@@ -4,30 +4,43 @@ body {
     font-family: helvetica;
     color: #3e3e3e;
 }
+
+/* HEADER */
+/* =============================================== */
+
 .header {
     position: relative;
     background-color: azure;
     width: 100%;
-    height: 50px;
+    height: 70px;
     color: blue;
 }
 
 .icon {
 position: absolute;
-width: 50px;
-height: 100%;
-background-color: red;
+width: 70px;
+height: 70px;
+background-color: lightseagreen;
+background-image: url("./heart.png");
+background-repeat: no-repeat;
+background-position: center;
+}
+
+.icon img {
+    width: 60px;
+    height: 60px;
 }
 
 .top-nav {
     position: absolute;
     width: 100%;
-    height: 50px;
+    height: 50px
 }
 
 .top-nav ul {
     text-align: right;
     margin-right: 100px;
+    margin-top: 25px;
 }
 
 .top-nav li  {
@@ -39,33 +52,67 @@ background-color: red;
     text-decoration: none;
 }
 
+.top-nav a:hover {
+    color: lightpink;
+    text-decoration: underline;
+}
+
 ul li{
     display: inline;
   }
 
-.body {
+/* TOP */
+/* =============================================== */
+
+.top {
     background-color: lightpink;
+    width: 100%;
+    display: flex;
+}
+
+/* TOP-MAIN-SENTENCE */
+/* =============================================== */
+
+.main-sentence {
+    width: 50%;
+    color: peru;
+    float: left;
+    border: 1px solid #fcddd1;
+
+}
+
+.main-sentence .sentence {
+    margin: 50px;
+    font-size: 1.6em;
+    border: 1px solid #fcddd1;
+}
+
+/* TOP-FORM */
+/* =============================================== */
+
+.form-container {
+    float: left;
+    border: 1px solid #050505;
+    width: 35%;
 }
 
 .contact-form {
-    margin: 10px 0 10px 400px;
     background-color: #f2f2f2;
-    display: inline-block;
     height: 350px;
-    width: 450px;
     border-radius: 5px;
-    padding: 15px;
+    padding: 10px;
+    margin: 25px 0;
 }
 
 .contact-form .contact-button {
-background-color: lightpink;
-width: 100%;
-border-radius: 7px;
-padding: 12px;
-cursor: pointer;
-margin: 15px 0;
-font-weight: bold;
-color: slateblue;
+    background-color: lightpink;
+    width: 100%;
+    border-radius: 7px;
+    padding: 12px;
+    cursor: pointer;
+    margin: 15px 0;
+    font-weight: bold;
+    color: slateblue;
 }
 
 .contact-form .contact-button:hover {
@@ -92,3 +139,22 @@ color: slateblue;
     border-color: teal;
 }
 
+/* TOP-ADDS */
+/* =============================================== */
+
+div.adds-container {
+    width: 100%;
+    height: 150px;
+    background-color: thistle;
+    
+}
+div.adds {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-column-gap: 20px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    padding: 10px 0;
+    text-align: justify;
+}
