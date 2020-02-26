@@ -10,25 +10,25 @@ body {
 
 .header {
     position: relative;
-    background-color: azure;
+    background-color: #527A79;
     width: 100%;
     height: 70px;
-    color: blue;
+    box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.2), 0 3px 60px 0 rgba(0, 0, 0, 0.19);
 }
 
 .icon {
 position: absolute;
-width: 70px;
-height: 70px;
-background-color: lightseagreen;
-background-image: url("./heart.png");
+width: 120px;
+height: 120px;
+background-image: url("./heart-big.png");
 background-repeat: no-repeat;
 background-position: center;
+margin-left: 130px;
 }
 
 .icon img {
-    width: 60px;
-    height: 60px;
+    width: 120px;
+    height: 120px;
 }
 
 .top-nav {
@@ -41,20 +41,25 @@ background-position: center;
     text-align: right;
     margin-right: 100px;
     margin-top: 25px;
+    
 }
 
 .top-nav li  {
     list-style: none;
     margin: 20px;
+    
 }
 
 .top-nav a {
     text-decoration: none;
+    color: #ACD6D3;
+    border-bottom: 2px solid; 
+    padding-bottom: 10px;
 }
 
 .top-nav a:hover {
     color: lightpink;
-    text-decoration: underline;
+    
 }
 
 ul li{
@@ -65,9 +70,10 @@ ul li{
 /* =============================================== */
 
 .top {
-    background-color: lightpink;
+    background-color: #c5ded7;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
 }
 
 /* TOP-MAIN-SENTENCE */
@@ -75,16 +81,23 @@ ul li{
 
 .main-sentence {
     width: 50%;
-    color: peru;
+    color: #708C90;
     float: left;
-    border: 1px solid #fcddd1;
-
+    
 }
 
 .main-sentence .sentence {
     margin: 50px;
+    padding: 0 20px;
     font-size: 1.6em;
-    border: 1px solid #fcddd1;
+    border: 2px solid #fcddd1;
+    text-align: justify;
+    font-family: Helvetica Neue Light;
+}
+
+.main-sentence .sentence .thank-big {
+    font-size: 1.65em;
+    color: #45b29a;
 }
 
 /* TOP-FORM */
@@ -92,31 +105,34 @@ ul li{
 
 .form-container {
     float: left;
-    border: 1px solid #050505;
     width: 35%;
+    align-items: center;
+    display: flex;
+    
 }
 
 .contact-form {
-    background-color: #f2f2f2;
+    background-color: rgb(248, 140, 129);
     height: 350px;
     border-radius: 5px;
     padding: 10px;
-    margin: 25px 0;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .contact-form .contact-button {
-    background-color: lightpink;
+    background-color: sandybrown;
     width: 100%;
     border-radius: 7px;
     padding: 12px;
     cursor: pointer;
     margin: 15px 0;
     font-weight: bold;
-    color: slateblue;
+    color: whitesmoke;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .contact-form .contact-button:hover {
-    background-color: seagreen;
+    background-color: salmon;
     color: white;
 }
 
@@ -133,10 +149,65 @@ ul li{
     padding: 12px 20px;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .contact-form input:hover {
     border-color: teal;
+}
+
+.palm-tree {
+    width: 15%;
+    height: 120px;
+    background-image: url("./palm-tree.png");
+    background-repeat: no-repeat;
+    align-self: flex-end;
+    margin-left: 450px;
+    position: absolute;
+}
+
+.flower-red {
+    width: 50px;
+    height: 50px;
+    background-image: url("./flower-red.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    margin-left: 500px;
+    margin-top: 70px;
+    display: inline-block;  
+}
+
+.flower-yellow {
+    width: 50px;
+    height: 50px;
+    background-image: url("./flower-yellow.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    margin-left: 400px;
+    margin-top: -40px;
+    display: inline-block;  
+}
+
+.bratek {
+    width: 50px;
+    height: 50px;
+    background-image: url("./bratek.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    margin-left: 500px;
+    margin-top: -140px;
+    display: inline-block;  
+}
+
+.rose-in-water {
+    width: 50px;
+    height: 50px;
+    background-image: url("./rose-in-water.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    margin-left: 270px;
+    margin-top: -180px;
+    display: inline-block;  
 }
 
 /* TOP-ADDS */
@@ -144,17 +215,113 @@ ul li{
 
 div.adds-container {
     width: 100%;
-    height: 150px;
-    background-color: thistle;
-    
+    max-height: 150px;
+    background-color: #c5ded7;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+    padding: 20px 0 50px 0;
 }
-div.adds {
-    display: grid;
-    grid-template-columns: 30% 30% 30%;
-    grid-column-gap: 20px;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    padding: 10px 0;
+div.add {
+    flex-grow: 1;
+    padding: 10px;
     text-align: justify;
+    width: 150px;
+    margin: 0 20px;
+}
+div.add:first-child {
+    margin-left: 40px;
+    border-right: 0.5px dashed gray;
+    padding-right: 50px;
+}
+
+div.add:last-child {
+    margin-right: 40px;
+    border-left: 0.5px dashed gray;
+    padding-left: 50px;
+}
+
+/* TOP-IMAGE-HOLDER */
+/* =============================================== */
+
+.top-img-container {
+    background: #c5ded7;
+}
+
+.top-img-holder {
+    margin: 0 auto;
+    background: #c5ded7;
+    width: 800px;
+}
+
+/* WHAT-I-DO */
+/* =============================================== */
+
+.what-I-do {
+    display: flex;
+    flex-direction: column;
+    background: whitesmoke;
+    flex-wrap: wrap;
+}
+.I-do {
+    width: 800px;
+    border-bottom: 3px solid #fcddd1;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.I-do h2 {
+    color: salmon;
+}
+
+.skill-row {
+    width: 50%;
+    margin: 90px auto 50px auto;
+    text-align: left;
+    line-height: 2;
+}
+
+.code-img {
+    width: 25%;
+    float: left;
+    margin-right: 30px;
+}
+
+.chilli-img {
+    width: 25%;
+    float: right;
+    margin-left: 30px;
+}
+
+h3.skills-desc {
+    color: #45b29a;
+    font-weight: 500;
+}
+
+.code-skill-description {
+    clear:left;
+}
+
+.chilli-skill-description {
+    clear: left;
+}
+
+/* FOOTER*/
+/* =============================================== */
+
+.footer {
+    width: 100%;
+    height: 40px;
+    background-color: #c5ded7;
+    padding: 3em 0;
+}
+
+footer p {
+    text-align: center;
+    color: #45b29a;
+    font-size: 1em;
+    font-weight: 100;
+    margin: 0;
+    padding: 2.5em 0 0;
 }
