@@ -1,29 +1,129 @@
+@media(max-width: 1280px){
+    .trees-flowers {
+        display: none;
+    }
+
+    .form-container {
+        margin: auto;
+        flex-basis: 45% !important; 
+        margin-left: 20px !important;
+    }
+
+}
+
+@media(max-width: 960px) {
+    .main-sentence {
+        flex-basis: 100% !important;
+    } 
+    .form-container {
+        flex-basis: 100% !important;
+    }
+    .contact-form {
+        margin: 0px 200px 20px 200px!important;
+    }
+    div.adds-container {
+        margin-bottom: 120px;
+    }
+
+}
+
+@media(max-width: 1200px) {
+    .label-nav {
+        display: block !important;
+        text-align: right;
+        font-size: 35px;
+        padding: 10px 30px 0px 0;
+        cursor: pointer;
+        width: 26px;
+        float: right;
+    }
+    #label-nav {
+        display: none !important; 
+    }
+    .menu-container {
+        width: 10% !important;
+        float: right !important;
+    }
+
+    .made-with-love-container {
+        margin-left: 100px;
+    }
+
+    .menu {
+        display: none;
+    }
+    #label-nav:checked + .menu {
+        display: inline-block;
+        
+    }
+}
+
+@media(max-width: 750px) {
+    div.add:last-child {
+        
+        border-left: none !important;
+        
+    }
+}
+
+/* START */
+/* =============================================== */
+
 body {
     margin: 0;
     padding: 0;
     font-family: helvetica;
     color: #3e3e3e;
+    background: #c5ded7;
 }
 
 /* HEADER */
 /* =============================================== */
 
 .header {
-    position: relative;
+    
+    margin: 0;
+    padding: 0;
     background-color: #527A79;
     width: 100%;
     height: 70px;
     box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.2), 0 3px 60px 0 rgba(0, 0, 0, 0.19);
 }
 
+.icon-container {
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+}
+.made-with-love-container {
+    vertical-align: top;
+    display: inline-block;
+    width: 17%;
+}
+.menu-container {
+    
+    display: inline-block;
+    width: 50%;
+}
+
 .icon {
-position: absolute;
-width: 120px;
-height: 120px;
-background-image: url("./heart-big.png");
-background-repeat: no-repeat;
-background-position: center;
-margin-left: 130px;
+    width: 120px;
+    height: 120px;
+    background-image: url("./heart-big.png");
+    background-repeat: no-repeat;
+    margin-left: 130px;
+}
+
+.label-nav,  #label-nav{
+    display: none;
+}
+
+.made-with-love {
+    font-family: "Sacramento";
+    margin-top: 20px;
+    width: 220px;
+    font-size: 2.4em;
+    color: lightgrey;   
 }
 
 .icon img {
@@ -31,33 +131,24 @@ margin-left: 130px;
     height: 120px;
 }
 
-.top-nav {
-    position: absolute;
-    width: 100%;
-    height: 50px
-}
-
-.top-nav ul {
+.menu ul {
     text-align: right;
-    margin-right: 100px;
-    margin-top: 25px;
-    
 }
 
-.top-nav li  {
+.menu li  {
     list-style: none;
     margin: 20px;
     
 }
 
-.top-nav a {
+.menu a {
     text-decoration: none;
     color: #ACD6D3;
     border-bottom: 2px solid; 
     padding-bottom: 10px;
 }
 
-.top-nav a:hover {
+.menu a:hover {
     color: lightpink;
     
 }
@@ -71,19 +162,17 @@ ul li{
 
 .top {
     background-color: #c5ded7;
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 /* TOP-MAIN-SENTENCE */
 /* =============================================== */
 
 .main-sentence {
-    width: 50%;
+    flex-basis: 50%;
     color: #708C90;
-    float: left;
-    
 }
 
 .main-sentence .sentence {
@@ -104,16 +193,13 @@ ul li{
 /* =============================================== */
 
 .form-container {
-    float: left;
-    width: 35%;
-    align-items: center;
-    display: flex;
-    
+    margin: auto;
+    flex-basis: 35%; 
 }
 
 .contact-form {
     background-color: rgb(248, 140, 129);
-    height: 350px;
+    
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -156,14 +242,20 @@ ul li{
     border-color: teal;
 }
 
+.trees-flowers {
+    flex-basis: 15%;
+    
+}
+
 .palm-tree {
-    width: 15%;
-    height: 120px;
+    width: 125px;
+    height: 125px;
     background-image: url("./palm-tree.png");
     background-repeat: no-repeat;
-    align-self: flex-end;
-    margin-left: 450px;
     position: absolute;
+    display: inline-block; 
+    margin-top: 50px;
+    margin-left: 10px;
 }
 
 .flower-red {
@@ -172,9 +264,9 @@ ul li{
     background-image: url("./flower-red.png");
     background-repeat: no-repeat;
     position: absolute;
-    margin-left: 500px;
-    margin-top: 70px;
-    display: inline-block;  
+    display: inline-block; 
+    margin-top: 0px;
+    margin-left: 95px;
 }
 
 .flower-yellow {
@@ -183,9 +275,9 @@ ul li{
     background-image: url("./flower-yellow.png");
     background-repeat: no-repeat;
     position: absolute;
-    margin-left: 400px;
-    margin-top: -40px;
     display: inline-block;  
+    margin-top: -175px;
+    margin-left: 25px;
 }
 
 .bratek {
@@ -194,9 +286,9 @@ ul li{
     background-image: url("./bratek.png");
     background-repeat: no-repeat;
     position: absolute;
-    margin-left: 500px;
-    margin-top: -140px;
-    display: inline-block;  
+    display: inline-block; 
+    margin-top: -100px;
+    margin-left: 100px;
 }
 
 .rose-in-water {
@@ -205,9 +297,9 @@ ul li{
     background-image: url("./rose-in-water.png");
     background-repeat: no-repeat;
     position: absolute;
-    margin-left: 270px;
-    margin-top: -180px;
-    display: inline-block;  
+    display: inline-block; 
+    margin-top: -40px;
+    margin-left: 5px
 }
 
 /* TOP-ADDS */
@@ -263,6 +355,7 @@ div.add:last-child {
     flex-direction: column;
     background: whitesmoke;
     flex-wrap: wrap;
+    padding-bottom: 10px;
 }
 .I-do {
     width: 800px;
@@ -274,6 +367,9 @@ div.add:last-child {
 .I-do h2 {
     color: salmon;
 }
+
+/* SKILLS */
+/* =============================================== */
 
 .skill-row {
     width: 50%;
@@ -313,7 +409,7 @@ h3.skills-desc {
 .footer {
     width: 100%;
     height: 40px;
-    background-color: #c5ded7;
+    background-color: #527A79;
     padding: 3em 0;
 }
 
@@ -321,7 +417,7 @@ footer p {
     text-align: center;
     color: #45b29a;
     font-size: 1em;
-    font-weight: 100;
+    font-weight: 500;
     margin: 0;
     padding: 2.5em 0 0;
 }

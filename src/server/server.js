@@ -25,6 +25,10 @@ app.get("/", (req, res) => {
     res.sendFile(__dirname + '/../index.html');
 })
 
+app.get("/login", (req, res) => {
+    res.send("hi");
+})
+
 app.post("/", (req,res) => {
 
     const newUser = new User ({

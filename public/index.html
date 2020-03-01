@@ -4,51 +4,76 @@
     <title>App</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Sacramento&display=swap" rel="stylesheet">
   </head>
   <body>
     <header class="header">
-      <div class="icon"></div>
-      <div class="top-nav">
+
+      <div class="icon-container">
+        <div class="icon"></div>
+      </div>
+
+      <div class="made-with-love-container">
+        <div class="made-with-love">
+          Made with love...
+        </div>
+      </div>
+      
+      <div class="menu-container">
+      <div class="menu">
         <ul>
           <li><a href="#">About me</a></li>
           <li><a href="#">Projects</a></li>
           <li><a href="#">Contacts</a></li>
           <li><a href="#">GitHub</a></li>
+          <li><a href="login">LOGIN</a></li>
         </ul>
+      </div>  
+      <label class="label-nav" for="label-nav">&#9776;</label>
+        <input type="checkbox" id="label-nav">
       </div>
+
     </header>
+
 <div class="top">
-<div class="main-sentence">
-  <div class="sentence">
-  <h1><span class="thank-big">Lorem</span> is simply dummy text of the printing and typesettin stantext ever since the testas</h1>
+
+  <div class="main-sentence">
+    <div class="sentence">
+      <h1><span class="thank-big">Lorem</span> is simply dummy text of the printing and typesettin stantext ever since the testas</h1>
+    </div>
+  </div>
+
+  <div class="form-container">
+    <div class="contact-form">
+      <form action="/" method="post">
+        <label for="fName">First name:</label>
+      <input type="text" name="fName" placeholder="What is your name?" autocomplete="off">
+        <label for="lName">Last name:</label>
+      <input type="text" name="lName" placeholder="What is your last name?" autocomplete="off">
+        <label for="email">Your e-mail is:</label>
+      <input type="text" name="email" placeholder="Provide valid e-mail address please" autocomplete="off">
+        <label for="city">City where you live is:</label>
+      <input type="text" name="city" placeholder="NY?" autocomplete="off">
+        <button class="contact-button" type="submit">SUBMIT</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="trees-flowers">
+    <div class="palm-tree"></div>
+    <div class="flower-red"></div>
+    <div class="flower-yellow"></div>
+    <div class="bratek"></div>
+    <div class="rose-in-water"></div>
+  </div>
 </div>
-</div>
-<div class="form-container">
-<div class="contact-form">
-<form action="/" method="post">
-  <label for="fName">First name:</label>
-<input type="text" name="fName" placeholder="What is your name?" autocomplete="off">
-  <label for="lName">Last name:</label>
-<input type="text" name="lName" placeholder="What is your last name?" autocomplete="off">
-  <label for="email">Your e-mail is:</label>
-<input type="text" name="email" placeholder="Provide valid e-mail address please" autocomplete="off">
-<label for="city">City where you live is:</label>
-<input type="text" name="city" placeholder="NY?" autocomplete="off">
-<button class="contact-button" type="submit">SUBMIT</button>
-</form>
-</div>
-<div class="palm-tree"></div>
-<div class="flower-red"></div>
-<div class="flower-yellow"></div>
-<div class="bratek"></div>
-<div class="rose-in-water"></div>
-</div>
-</div>
+
 <div class="adds-container">
   <div class="add">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, </div>
   <div class="add">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, </div>
   <div class="add">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, </div>
 </div>
+
 <div class="top-img-container">
 <div class="top-img-holder">
   <img  src="./land.svg" alt="">
